@@ -11,3 +11,15 @@ How old are you?
 > 25
 In 2056, you will be 56 years old!
 """
+
+#Age Program
+#Aaryan Gogna
+#Sep 23, 2025
+
+print("Hi, how old are you!")
+
+age = int(input())
+
+calculatedAge = age + 31
+
+print("In 2056, you will be " + str(calculatedAge) + ".")
