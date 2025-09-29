@@ -1,5 +1,6 @@
-file = open("2.4/main.py")
+responses = open("2.4/responses.csv")
 
-for line in file
-    if "aaryan" in line.lower():
-        print(line)
+for response in responses:
+    response = response.split(",")
+    if "5" or "7" in response:
+        print(response)
