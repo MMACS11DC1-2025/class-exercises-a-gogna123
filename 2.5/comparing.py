@@ -59,7 +59,7 @@ for r in rows:
 # If both names are in the data, initilaize the similarites to 0. 
 if person1 == "" and person2 == "":
     print("Both not found")
-elif person1 == "":
+elif person1 == ""::
     print("First not found")
 elif person2 == "":
     print("Second not found")
