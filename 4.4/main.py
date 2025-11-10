@@ -35,14 +35,14 @@ print("Themes Available: Spring, Ocean, Sunset, Lavender, Rose, Night\n")
 
 # Choose Theme by asking the user for the theme choice
 while True:
-    theme_choice = input("Choose a Color Theme: ").strip().lower()
+    theme_choice = input("Choose a Colour Theme(Spring, Ocean, Sunset, Lavender, Rose, Night): ").strip().lower()
     if theme_choice in Spiral_Themes:
         break
     print("That theme doesn’t exist. Try again.\n")
 
 # Choose Speed by asking the user for the speed choice
 while True:
-    speed_input = input("choose drawing speed (1–5, 1 = slow, 3 = medium, 5 = fast): ").strip()
+    speed_input = input("Choose drawing speed (1-5, 1 = slow, 3 = medium, 5 = fast): ").strip()
     if speed_input.isdigit():
         speed = int(speed_input)
         if 1 <= speed <= 5:
@@ -79,10 +79,11 @@ total_calls = draw_spiral(starting_radius, turn_angle)
 
 # Final Message including amount of recursive calls made
 print("\nSpiral Complete!")
-print("Theme Chosen:", theme_choice)
-print("Speed Selected:", speed)
-print("Direction:", direction)
-print("Total Recursive calls made:", total_calls)
+print("Theme Chosen: " + theme_choice)
+print("Speed Selected: " + str(speed))
+print("Direction: " + direction)
+print("Total Recursive Calls Made: " + str(total_calls))
 print("Enjoy your Recursive Spiral!")
+
 
 turtle.done()
