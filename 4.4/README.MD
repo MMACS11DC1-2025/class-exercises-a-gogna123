@@ -32,7 +32,7 @@ I have attached both screenshots with different results in the "Screenshots_Outp
  1. For the first test case, I used the Spring color theme with a speed of 2 and selected the inward direction.
 I expected the spiral to curl smoothly toward the center with bright green tones and a slow drawing speed.
 When the program was run, the spiral appeared exactly as expected, it was centered and drew inward in a tight circular motion, and displayed the bright green spring color theme.
-The speed was accurate, and the shrinking motion clearly showed recursion in action.
+The speed was accurate, and the shrinking motion clearly showed recursive code.
 Overall, the actual output matched the expected result perfectly.
 2. For the second test case, I used the Ocean color theme with a speed of 5 and selected the outward direction.
 I expected the spiral to turn in the opposite direction, expanding outward instead of curling in, while showing smooth blue tones on a dark navy background.
