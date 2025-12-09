@@ -22,6 +22,15 @@ which added all the white and orange pixels together.
 2. Print the list for testing.
 
 # Day 3:
+Today I created a master list that stores each image’s name and its fire intensity score.
+1. After calculating the orange and white pixel percentages for every image, I combined them into one value and used the .append() function to add ["ImageName", score] into a list called fire_scores.
+2. I printed the list at the end of the program to make sure everything was working correctly.
+3. This prepares the project for sorting and searching in the next stages.
 
+# Day 4 Plan:
+1. Write the Selection Sort function that sorts the fire_scores list from highest fire score to lowest.
+2. Print the top 5 most intense fires using list slicing.
+3. Test that the sorting works correctly before moving on.
 
+# Day 4:
 

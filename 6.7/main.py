@@ -25,6 +25,8 @@ image_files = [
     "WildFireSmoke"
 ]
 
+fire_scores = []
+
 for filename in image_files:
 
     start_time = time.time()
@@ -55,6 +57,8 @@ for filename in image_files:
     white_percent = 100 * white_pixels / total_pixels
     fire_percent = int(white_percent) + int(orange_percent)
 
+    fire_scores.append([filename, fire_percent])
+
     if fire_percent < 6:
         size = "SMALL Fire. Proceed with caution!"
     elif fire_percent < 16:
@@ -72,4 +76,9 @@ for filename in image_files:
     print(size)
     print("Processing Time: {:.3f} seconds".format(elapsed))
     print()  
+
+
+    print("Fire Score List:")
+    print(fire_scores)
+    print()
 
