@@ -33,4 +33,19 @@ Today I created a master list that stores each image’s name and its fire inten
 3. Test that the sorting works correctly before moving on.
 
 # Day 4:
+Today I added pseudo comments to my code, added a selection_sort function that sorts the fire and danger score. This was a small but important step in getting the project closer to completion.
+1. I wrote a Selection Sort function that sorts all fires from highest danger score to lowest. 
+2. I created a dictionary that stores how long each image takes to process. This allowed me to print both the danger score and the processing time for each image in an organized way.
+3. After the sorting was complete, I generated a final report that displays all fires, their danger scores, and their processing times.
+4. Todays selection sort will help me implement binary search tomorrow.
+
+# Day 5 Plan:
+1. Create a Binary Search function that searches the sorted fire list for a specific danger score (1, 2, 3, or 4).
+2. Ask the user for a danger score they want to search for (ex: “Find all fires with a score of 3”).
+3. Use Binary Search to locate one matching fire score in the sorted list.
+4. If a match is found, display the fire’s name and score.
+5. If no match is found, print a simple message like “No fire found with that score.”
+6. Test the Binary Search with multiple target values to make sure it works.
+
+# Day 5:
 
