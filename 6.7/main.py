@@ -23,6 +23,26 @@ def selection_sort(score_list):
                 max_index = j
         score_list[i], score_list[max_index] = score_list[max_index], score_list[i]
 
+
+# Function that searches for a simple fire score based on input
+def binary_search(sorted_list, target_score):
+    low = 0
+    high = len(sorted_list) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        mid_score = sorted_list[mid][1]
+
+        if mid_score == target_score:
+            return mid 
+        elif mid_score < target_score:
+            high = mid - 1
+        else:
+            low = mid + 1
+
+    return -1  
+
+
 # List of image names in a list, this will be used in a loop to read through each image
 image_files = [
     "BonFire",
@@ -40,14 +60,12 @@ image_files = [
 # Master list to store each image name and a fire score
 fire_scores = []
 
-# Dictionary to store processing times for each image
-processing_times = {}
+# Start the time for the program
+program_start = time.time()
+
 
 # Main loop to process each image
 for filename in image_files:
-
-    # Start the time so we can determine the time it takes to process each image
-    start_time = time.time()
 
     # This will open every file in the 6.7/images folder
     file = Image.open("6.7/Images/" + filename + ".jpg")
@@ -94,16 +112,15 @@ for filename in image_files:
     else:
         danger_score = 4
 
-    # End the timing
-    end_time = time.time()
-    elapsed = end_time - start_time
-
-    # Store results in the master list and in the processing time dictionary
+    # Store results in the master list 
     fire_scores.append([filename, danger_score])
-    processing_times[filename] = elapsed
 
+# End the time for the program and make a new variable to determine the time it took for the program to run
+program_end = time.time()
+total_time = program_end - program_start
 
 # Start printing the output
+print()
 print("Final Fire Report:")
 print()
 print("All Fires and Their Scores:")
@@ -113,10 +130,8 @@ print()
 for entry in fire_scores:
     name = entry[0]
     score = entry[1]
-    time_taken = processing_times[name]
 
     print(name + ": Danger Score " + str(score) + "/4")
-    print("Processing Time: " + str(round(time_taken, 3)) + " seconds")
     print()
 
 # Sort the results from highest to lowest danger score
@@ -137,3 +152,34 @@ for entry in top5:
     score = entry[1]
     print(str(rank) + ". " + name + " - Score " + str(score) + "/4")
     rank += 1
+
+print()
+print("Total Processing Time for All Images: {:.3f} seconds".format(total_time))
+
+print("You can search for fires with a danger score from 1 to 4.")
+print()
+
+target = int(input("Enter a danger score to search for (1–4): "))
+
+
+selection_sort(fire_scores)
+
+index = binary_search(fire_scores, target)
+
+if index != -1:
+    result_name = fire_scores[index][0]
+    result_score = fire_scores[index][1]
+    print("Fires with score of " + str(target) + " was found: ")
+else:
+    print("No fire found with that score.")
+
+print("\nAll fires with score " + str(target) + ":")
+
+found_any = False
+for entry in fire_scores:
+    if entry[1] == target:
+        print("- " + entry[0] + " (Score " + str(entry[1]) + "/4)")
+        found_any = True
+
+if not found_any:
+    print("No other fires found with that score.")

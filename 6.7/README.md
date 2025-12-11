@@ -41,11 +41,26 @@ Today I added pseudo comments to my code, added a selection_sort function that s
 
 # Day 5 Plan:
 1. Create a Binary Search function that searches the sorted fire list for a specific danger score (1, 2, 3, or 4).
-2. Ask the user for a danger score they want to search for (ex: “Find all fires with a score of 3”).
+2. Ask the user for a danger score they want to search for (ex: "Find all fires with a score of 3").
 3. Use Binary Search to locate one matching fire score in the sorted list.
 4. If a match is found, display the fire’s name and score.
 5. If no match is found, print a simple message like “No fire found with that score.”
 6. Test the Binary Search with multiple target values to make sure it works.
 
 # Day 5:
+Today I implemented the Binary Search feature for my fire detection program. Before starting Binary Search, I also changed my time-tracking system so that the program now measures one total processing time instead of timing each image individually. This keeps the output cleaner and still shows the overall performance of the program. Overall, I'm almost done the project!
+1. First, I wrote a Binary Search function that looks through the sorted fire list and searches for a specific danger score (1–4).
+2. I added user input so the program asks the user which danger score they want to find.
+3. Binary Search is then used to locate one matching fire inside the sorted list.
+4. If at least one fire has that score, the program prints a message saying a match was found.
+5. After that, I also added a feature that lists all fires with that danger score (not just the first result).
+6. If no fires match the score, the program prints a simple message explaining that no results were found.
+7. I tested Binary Search with several numbers (1, 2, 3, and 4), and the program showed the correct results each time.
 
+# Day 6 Plan:
+1. Add pseudocode to all my major components of my code.
+2. Project Overview.
+3. Testing wwith test cases.
+4. Performace analysis.
+5. Challenges faced and how I overachieved them.
+6. Creativity section, why fire detection is important to society.
