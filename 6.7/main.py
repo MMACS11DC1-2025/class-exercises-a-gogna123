@@ -178,12 +178,12 @@ index = binary_search(fire_scores, target)
 if index != -1:
     result_name = fire_scores[index][0]
     result_score = fire_scores[index][1]
-    print("Fires with score of " + str(target) + " was found: ")
+    print("Fire(s) with a score of " + str(target) + " was found: ")
 else:
     print("No fire found with that score.")
 
 print("\nAll fires with score " + str(target) + ":")
-
+ 
 found_any = False
 for entry in fire_scores:
     if entry[1] == target:

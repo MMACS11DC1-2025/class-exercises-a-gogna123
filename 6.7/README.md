@@ -55,7 +55,7 @@ I have attached screenshots of the outputs as proof everything is working in the
 I expected the program to print to the screen the fires with the score of 3.
 When the program was run, the program did exactly what I expected.
 
-2. For the third test case, I purposely entered invalid inputs to test the program’s error handling.
+2. For the second test case, I purposely entered invalid inputs to test the program’s error handling.
 I typed an incorrect number that was not in the danger score.
 I expected the program to not let the input go through ask again until a valid input was given.
 When I entered an invalid input, it repeatedly asked the inputs "No fires found with that score. Please enter a number between 1 and 4,"Enter a danger score to search for (1-4):" until a valid input value was entered.
@@ -140,4 +140,10 @@ Today was basically the final day of the project, I focused by reviewing my code
 # Day 7 Plan:
 1. Add self rubric evaluation to the folder.
 2. Add screenshots of testing outputs.
-3. Review all code from main.py and readme.md to make sure that everything is done in the project.md
+3. Review all code from main.py and readme.md to make sure that everything is done in the project.md.
+
+# Day 7:
+Today is the final day of the project. I had alot of fun using my ideas and implementing them!
+1. I added test cases screenshots in the "6.7" folder.
+2. I added a self evaluation in the "6.7" folder.
+
