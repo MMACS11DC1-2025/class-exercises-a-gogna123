@@ -6,11 +6,11 @@
 import time
 from PIL import Image
 
-# Function to determine orange pixels that are a fire
+# Function to determine orange pixels that are a fire using certain rgb values
 def is_orange(r, g, b):
     return (r >= 180 and 80 <= g <= 215 and b <= 130 and r > g)
 
-# Function to determine white pixels that are a fire
+# Function to determine white pixels that are a fire using certain rgb values
 def is_white(r, g, b):
     return (r >= 210 and g >= 210 and b >= 180)
 
@@ -24,7 +24,7 @@ def selection_sort(score_list):
         score_list[i], score_list[max_index] = score_list[max_index], score_list[i]
 
 
-# Function that searches for a simple fire score based on input
+# Function that searches for a simple fire score based on input using Binary Search
 def binary_search(sorted_list, target_score):
     low = 0
     high = len(sorted_list) - 1
@@ -159,10 +159,19 @@ print("Total Processing Time for All Images: {:.3f} seconds".format(total_time))
 print("You can search for fires with a danger score from 1 to 4.")
 print()
 
-target = int(input("Enter a danger score to search for (1–4): "))
+# A while loop that makes sure a proper input is being entered.
+while True:
+    target = int(input("Enter a danger score to search for (1-4): "))
+    
+    if target < 1 or target > 4:
+        print("No fires found with that score. Please enter a number between 1 and 4.")
+        print()
+    else:
+        break
 
 
 selection_sort(fire_scores)
+
 
 index = binary_search(fire_scores, target)
 
@@ -178,7 +187,7 @@ print("\nAll fires with score " + str(target) + ":")
 found_any = False
 for entry in fire_scores:
     if entry[1] == target:
-        print("- " + entry[0] + " (Score " + str(entry[1]) + "/4)")
+        print(" " + entry[0] + " (Score " + str(entry[1]) + "/4)")
         found_any = True
 
 if not found_any:
